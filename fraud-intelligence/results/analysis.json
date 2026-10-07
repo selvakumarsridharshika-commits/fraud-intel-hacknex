@@ -1,0 +1,218 @@
+{
+    "project": "Real-Time Financial Fraud Intelligence",
+    "status": "analysis_completed",
+    "summary": {
+        "total_transactions": 7,
+        "total_accounts": 7,
+        "suspicious_accounts": 3,
+        "fraud_ring_detected": true
+    },
+    "fraud_ring": {
+        "ring_id": "FR001",
+        "detected": true,
+        "accounts": [
+            "A101",
+            "A102",
+            "A103"
+        ],
+        "risk_score": 85,
+        "evidence": [
+            "Accounts share device D01",
+            "Accounts share IP address IP01",
+            "Accounts transfer to common destination A999"
+        ]
+    },
+    "accounts": [
+        {
+            "account_id": "A101",
+            "risk_score": 85,
+            "risk_level": "CRITICAL",
+            "reasons": [
+                "Shares device D01 with other accounts",
+                "Shares IP address IP01 with other accounts",
+                "Uses merchant M01 shared with other accounts",
+                "Shares location Chennai with other accounts",
+                "Transfers to common destination A999"
+            ]
+        },
+        {
+            "account_id": "A102",
+            "risk_score": 85,
+            "risk_level": "CRITICAL",
+            "reasons": [
+                "Shares device D01 with other accounts",
+                "Shares IP address IP01 with other accounts",
+                "Uses merchant M01 shared with other accounts",
+                "Shares location Chennai with other accounts",
+                "Transfers to common destination A999"
+            ]
+        },
+        {
+            "account_id": "A103",
+            "risk_score": 85,
+            "risk_level": "CRITICAL",
+            "reasons": [
+                "Shares device D01 with other accounts",
+                "Shares IP address IP01 with other accounts",
+                "Uses merchant M01 shared with other accounts",
+                "Shares location Chennai with other accounts",
+                "Transfers to common destination A999"
+            ]
+        },
+        {
+            "account_id": "A104",
+            "risk_score": 0,
+            "risk_level": "LOW",
+            "reasons": []
+        },
+        {
+            "account_id": "A105",
+            "risk_score": 0,
+            "risk_level": "LOW",
+            "reasons": []
+        },
+        {
+            "account_id": "A106",
+            "risk_score": 0,
+            "risk_level": "LOW",
+            "reasons": []
+        },
+        {
+            "account_id": "A107",
+            "risk_score": 25,
+            "risk_level": "LOW",
+            "reasons": [
+                "Shares location Chennai with other accounts",
+                "Transfers to common destination A999"
+            ]
+        }
+    ],
+    "transactions": [
+        {
+            "transaction_id": "T001",
+            "account_id": "A101",
+            "amount": 5000.0,
+            "timestamp": "2026-10-07 10:01:00",
+            "device_id": "D01",
+            "ip_address": "IP01",
+            "location": "Chennai",
+            "merchant_id": "M01",
+            "destination_account": "A999",
+            "payment_channel": "UPI",
+            "risk_score": 80,
+            "risk_level": "CRITICAL",
+            "reasons": [
+                "Large transaction amount: \u20b95000",
+                "Device D01 is shared by multiple accounts",
+                "IP IP01 is shared by multiple accounts",
+                "Destination A999 receives money from multiple accounts"
+            ]
+        },
+        {
+            "transaction_id": "T002",
+            "account_id": "A102",
+            "amount": 4800.0,
+            "timestamp": "2026-10-07 10:03:00",
+            "device_id": "D01",
+            "ip_address": "IP01",
+            "location": "Chennai",
+            "merchant_id": "M01",
+            "destination_account": "A999",
+            "payment_channel": "UPI",
+            "risk_score": 75,
+            "risk_level": "HIGH",
+            "reasons": [
+                "Device D01 is shared by multiple accounts",
+                "IP IP01 is shared by multiple accounts",
+                "Destination A999 receives money from multiple accounts",
+                "Occurs within 5 minutes of another account's transaction"
+            ]
+        },
+        {
+            "transaction_id": "T003",
+            "account_id": "A103",
+            "amount": 5200.0,
+            "timestamp": "2026-10-07 10:05:00",
+            "device_id": "D01",
+            "ip_address": "IP01",
+            "location": "Chennai",
+            "merchant_id": "M01",
+            "destination_account": "A999",
+            "payment_channel": "UPI",
+            "risk_score": 95,
+            "risk_level": "CRITICAL",
+            "reasons": [
+                "Large transaction amount: \u20b95200",
+                "Device D01 is shared by multiple accounts",
+                "IP IP01 is shared by multiple accounts",
+                "Destination A999 receives money from multiple accounts",
+                "Occurs within 5 minutes of another account's transaction"
+            ]
+        },
+        {
+            "transaction_id": "T004",
+            "account_id": "A104",
+            "amount": 700.0,
+            "timestamp": "2026-10-07 10:10:00",
+            "device_id": "D02",
+            "ip_address": "IP02",
+            "location": "Coimbatore",
+            "merchant_id": "M02",
+            "destination_account": "A888",
+            "payment_channel": "CARD",
+            "risk_score": 15,
+            "risk_level": "LOW",
+            "reasons": [
+                "Occurs within 5 minutes of another account's transaction"
+            ]
+        },
+        {
+            "transaction_id": "T005",
+            "account_id": "A105",
+            "amount": 1200.0,
+            "timestamp": "2026-10-07 10:20:00",
+            "device_id": "D03",
+            "ip_address": "IP03",
+            "location": "Madurai",
+            "merchant_id": "M03",
+            "destination_account": "A777",
+            "payment_channel": "NETBANKING",
+            "risk_score": 0,
+            "risk_level": "LOW",
+            "reasons": []
+        },
+        {
+            "transaction_id": "T006",
+            "account_id": "A106",
+            "amount": 900.0,
+            "timestamp": "2026-10-07 10:30:00",
+            "device_id": "D04",
+            "ip_address": "IP04",
+            "location": "Salem",
+            "merchant_id": "M04",
+            "destination_account": "A666",
+            "payment_channel": "CARD",
+            "risk_score": 0,
+            "risk_level": "LOW",
+            "reasons": []
+        },
+        {
+            "transaction_id": "T007",
+            "account_id": "A107",
+            "amount": 4500.0,
+            "timestamp": "2026-10-07 10:35:00",
+            "device_id": "D05",
+            "ip_address": "IP05",
+            "location": "Chennai",
+            "merchant_id": "M05",
+            "destination_account": "A999",
+            "payment_channel": "UPI",
+            "risk_score": 30,
+            "risk_level": "MEDIUM",
+            "reasons": [
+                "Destination A999 receives money from multiple accounts",
+                "Occurs within 5 minutes of another account's transaction"
+            ]
+        }
+    ]
+}
